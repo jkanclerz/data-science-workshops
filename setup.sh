@@ -1,10 +1,14 @@
 #!/usr/bin/env sh
 
+#DNS
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+
 #development
 apk --update add gcc g++ linux-headers
 
 #tools
-apk add git
+apk add git curl
 #python
 apk --update add python3 python3-dev
 
