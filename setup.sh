@@ -9,9 +9,9 @@ apk add git
 apk --update add python3 python3-dev
 
 clear
-python -c "import this"
+python3 -c "import this"
 
 read -n 1 -s -r -p "Press any key to continue"
 echo ""
 echo "Your ip address:"
-ip -4 addr show eth0 | grep inet | tr -s " " | cut -d" "  -f3
+ip -4 addr show | grep inet | tr -s " " | cut -d" "  -f3
