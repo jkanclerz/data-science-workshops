@@ -8,7 +8,7 @@ echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 apk --update add gcc g++ linux-headers
 
 #tools
-apk add git curl
+apk add git curl unzip
 #python
 apk --update add python3 python3-dev
 
