@@ -19,3 +19,13 @@ read -n 1 -s -r -p "Press any key to continue"
 echo ""
 echo "Your ip address:"
 ip -4 addr show | grep inet | tr -s " " | cut -d" "  -f3
+
+
+
+##
+apk add postgresql
+rc-service postgresql start
+
+psql -U postgres -c "CREATE ROLE datascience LOGIN PASSWORD 'datascience';";
+psql -U postgres -c "CREATE DATABASE datascience WITH OWNER = datascience;";
+psql -U datascience -c "select 1;";
