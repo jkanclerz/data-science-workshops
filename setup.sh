@@ -23,7 +23,7 @@ apk --update add gcc g++ linux-headers libffi-dev openssl-dev
 #tools
 apk add git curl unzip
 #python
-apk --update add python3 python3-dev
+apk --update add python3 python3-dev cython
 
 ##
 apk add postgresql
