@@ -58,6 +58,13 @@ else
   docker run -dit -p 27017:27017 --restart unless-stopped --name mongodb mongo:3-xenial
 fi
 
+wget https://github.com/SouthbankSoftware/dbkoda-data/raw/master/SampleCollections/dump/SampleCollections/video_movies.bson
+wget https://github.com/SouthbankSoftware/dbkoda-data/raw/master/SampleCollections/dump/SampleCollections/video_movieDetails.bson
+
+docker cp video_movies.bson mongodb:/tmp/video.bson
+docker cp video_movieDetails.bson mongodb:/tmp/details.bson
+docker exec mongodb bash -c "cd /tmp; mongorestore --db datascience --drop --collection movies details.bson"
+docker exec mongodb bash -c "cd /tmp; mongorestore --db datascience --drop --collection films video.bson"
 
 clear;
 python3 -c "import this";
