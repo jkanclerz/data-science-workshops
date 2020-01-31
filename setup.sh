@@ -3,6 +3,12 @@
 #DNS
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+echo "options ndots:5" >> /etc/resolv.conf
+
+#CRONTAB 
+echo '*       *       *       *       *       echo -e "nameserver 8.8.8.8 \nnameserver 8.8.4.4\noptions ndots:5\n" > /etc/resolv.conf' > /etc/crontabs/root
+
+rc-service crond restart
 
 #REPOS
 echo "http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/v3.10/main" > /etc/apk/repositories
