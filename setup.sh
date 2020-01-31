@@ -18,7 +18,11 @@ echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/community" >> /
 echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/testing" >> /etc/apk/repositories
 
 #development
-apk --update add gcc g++ linux-headers libffi-dev openssl-dev openblas-dev libxml2
+apk --update add gcc g++ linux-headers libffi-dev openssl-dev openblas-dev \
+	libxml2 \
+	libxslt \
+        libxslt-dev \
+        lubxml2-dev
 
 #tools
 apk add git curl unzip
