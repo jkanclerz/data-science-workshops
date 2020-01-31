@@ -22,8 +22,8 @@ apk --update add gcc g++ linux-headers libffi-dev openssl-dev openblas-dev \
 	libxml2 \
 	libxslt \
         libxslt-dev \
-        lubxml2-dev
-
+        lubxml2-dev \
+        postgresql-dev
 #tools
 apk add git curl unzip
 #python
