@@ -32,7 +32,7 @@ apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev openblas-dev
 #tools
 apk add git curl unzip
 #python
-apk --update add python3 python3-dev cython
+apk --update add python3 python3-dev cython py3-scipy py3-numpy
 
 ##
 apk add postgresql postgresql-dev
