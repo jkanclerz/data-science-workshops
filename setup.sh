@@ -18,8 +18,13 @@ echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/community" >> /
 echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/testing" >> /etc/apk/repositories
 
 #development
-apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev openblas-dev \
+apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev \
+	openblas openblas-dev \
 	automake \
+	libgfortran \
+	build-base \
+	freetype \
+	libgcc \
 	subversion \
 	libxml2 \
 	libxml2-dev \
