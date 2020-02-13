@@ -82,3 +82,4 @@ echo ""
 
 echo "mongodb is available via: localhost:27017"
 echo ""
+docker rm -f redisdb; docker run -dit -p 6379:6379 --restart unless-stopped --name redisdb redis
