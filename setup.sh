@@ -30,7 +30,7 @@ apk add git curl unzip
 apk --update add python3 python3-dev cython
 
 ##
-apk add postgresql
+apk add postgresql postgresql-dev
 rc-update add postgresql
 rc-service postgresql start
 ##psql
