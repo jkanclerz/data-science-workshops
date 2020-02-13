@@ -17,9 +17,6 @@ echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/main" >> /etc/a
 echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/community" >> /etc/apk/repositories
 echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/testing" >> /etc/apk/repositories
 
-apk add --no-cache cmake gcc libxml2 \
-       automake g++ subversion python3-dev \
-       libxml2-dev libxslt-dev lapack-dev gfortran 
 #development
 apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev openblas-dev \
 	automake \
@@ -27,6 +24,7 @@ apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev openblas-dev
 	libxml2 \
 	libxml2-dev \
 	libxslt-dev lapack-dev gfortran \
+	libatlas-base-dev \ 
 	libxslt \
         libxslt-dev \
         lubxml2-dev \
