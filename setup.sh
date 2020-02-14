@@ -23,7 +23,15 @@ apk --update add gcc g++ linux-headers libffi-dev openssl-dev openblas-dev \
 	libxslt \
         libxslt-dev \
         lubxml2-dev \
-        postgresql-dev
+        libgcc \
+        libquadmatch \
+        musl \
+        libgfortran \
+        lapack-dev \
+        postgresql-dev \
+        openblas \
+        lapack         
+
 #tools
 apk add git curl unzip
 #python
@@ -44,7 +52,7 @@ rc-update add docker
 rc-service docker start
 
 #compose
-pip3 install docker-compose
+#pip3 install docker-compose
 
 #mongo
 
