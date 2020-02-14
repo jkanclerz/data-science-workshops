@@ -35,6 +35,7 @@ apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev \
         libgcc \
         musl \
         libgfortran \
+	freetype-dev \
         postgresql-dev \
         openblas \
         lapack         
