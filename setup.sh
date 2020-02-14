@@ -18,8 +18,18 @@ echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/community" >> /
 echo "#http://ftp.icm.edu.pl/pub/Linux/distributions/alpine/edge/testing" >> /etc/apk/repositories
 
 #development
-apk --update add gcc g++ linux-headers libffi-dev openssl-dev openblas-dev \
+apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev \
+	openblas openblas-dev \
+	automake \
+	libgfortran \
+	build-base \
+	freetype \
+	libgcc \
+	subversion \
 	libxml2 \
+	libxml2-dev \
+	libxslt-dev lapack-dev gfortran \
+	libatlas-base-dev \ 
 	libxslt \
         libxslt-dev \
         lubxml2-dev \
@@ -35,7 +45,7 @@ apk --update add gcc g++ linux-headers libffi-dev openssl-dev openblas-dev \
 #tools
 apk add git curl unzip
 #python
-apk --update add python3 python3-dev cython
+apk --update add python3 python3-dev cython py3-scipy py3-numpy
 
 ##
 apk add postgresql postgresql-dev
