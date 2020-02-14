@@ -26,6 +26,7 @@ apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev \
 	freetype \
 	libgcc \
 	subversion \
+        tar gzip \
 	libxml2 \
 	libxml2-dev \
 	libxslt-dev lapack-dev gfortran \

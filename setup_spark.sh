@@ -3,7 +3,7 @@
 export SCALA_VERSION=2.12.0
 export SCALA_HOME=/opt/scala
 
-export SPARK_VERSION=2.4.4
+export SPARK_VERSION=2.4.5
 export SPARK_HOME=/opt/spark
 export SPARK_PACKAGE="bin-hadoop2.7"
 
@@ -39,3 +39,4 @@ wget https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aw
 
 wget https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar -P $SPARK_HOME/jars
 
+export PATH=${SCALA_HOME}/bin:${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${PATH}
