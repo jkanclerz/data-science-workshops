@@ -44,7 +44,8 @@ apk add git curl unzip
 #python
 apk --update add python3 python3-dev cython py3-scipy py3-numpy
 pip3 install -r requirements.txt
-
+ln -sf /usr/bin/pip3 /usr/bin/pip
+ln -sf /usr/bin/python3 /usr/bin/python
 ##
 apk add postgresql postgresql-dev
 rc-update add postgresql
