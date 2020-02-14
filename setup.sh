@@ -29,13 +29,10 @@ apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev \
         tar gzip \
 	libxml2 \
 	libxml2-dev \
-	libxslt-dev lapack-dev gfortran \
-	libatlas-base-dev \ 
+	libxslt-dev gfortran \
 	libxslt \
         libxslt-dev \
-        lubxml2-dev \
         libgcc \
-        libquadmatch \
         musl \
         libgfortran \
         lapack-dev \
@@ -47,6 +44,7 @@ apk --update add cmake gcc g++ linux-headers libffi-dev openssl-dev \
 apk add git curl unzip
 #python
 apk --update add python3 python3-dev cython py3-scipy py3-numpy
+pip3 install -r requirements.txt
 
 ##
 apk add postgresql postgresql-dev
